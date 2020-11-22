@@ -1,0 +1,66 @@
+The Chess Board is a two diamentional matrix with 8 rows and 8 columns and each cell is uniquely indentified by its namewhich consists of 
+2 characters. The rows are numbered from '1' through '8' and columns are numbered from 'A' through 'H'. For example A8, B4.
+
+There are in total 6 unique pieces that a user could choose from i.e. "King", "Qween", "Horse", "Pawn", "Bishop", "Rook".
+
+For Input string --- 
+    i) The input string should consists of two words only in the format "Word1 Word2" (without quotes).
+   ii) Word1 : It should be the name of one of the unique pieces provided above.
+  iii) Word2 : It should be the cell or location of that particular piece given in Word1. The positions should be in [column_row] 
+               format only, such as A8, B4 etc.
+   iv) There are mainly 64 unique cell positions over the chess board and any type of position beyong these may result in an error.
+       E.g. C9, 4K, 9C, K4 all are invalid!
+    v) Similarly, the names of the pieces should be coreectly spelled (without any case senstivity).
+       E.g. Horse, hORse, kING, RoOk the all are valid input for Word1.
+       
+  
+Movement of "King":
+    The King could only from its initial position to only one of its valid 8 positions in all the 8 directions respectively.
+    Input 1 : King B4: (Here the King has all the options in the 8 diretions).
+    Output 1: C5 A3 C3 A5 B3 B5 C4 A4 (all possible moves).
+    
+    Input 2 : King H8
+    Output 2: G7 H7 G8 (However, here only 3 possible moves are present).
+    
+
+Movement of "Qween":
+    The "Qween" could move to any of the8 directions all any number of cells in the corresponding direction all long as the cells are valid.
+    Input 1 : Qween B4 
+    Output 1: C5 A3 D6 E7 F8 C3 A5 D2 E1 B3 B5 B2 B6 B1 B7 B8 C4 A4 D4 E4 F4 G4 H4 
+    
+    Input 2 : Qween H8 (input as one of the 4 corners in the chess board)
+    Output 2: G7 F6 E5 D4 C3 B2 A1 H7 H6 H5 H4 H3 H2 H1 G8 F8 E8 D8 C8 B8 A8 
+    
+    Input 3 : Qween E1 (input as one of the 4 boundaries in the chess board)
+    Output 3: F2 G3 H4 D2 C3 B4 A5 E2 E3 E4 E5 E6 E7 E8 F1 D1 G1 C1 H1 B1 A1
+    
+    
+Movement of "Bishop":
+    The "Bishop" just like the "Qween" could move all possible number of cells but only in 4 diagonal directions.
+    Input 1 : Bishop B4
+    Output 1: C5 A3 D6 E7 F8 C3 A5 D2 E1 (Movement in all possible 4 diagonal directions).
+    
+    Input 1 : Bishop H8
+    Output 1: G7 F6 E5 D4 C3 B2 A1 (Here movemnt was restricted to only 1 direction). 
+    
+    
+Movement of "Rook":
+    The "Rook" is able to move only in Horizontal and Vertical Directions.
+    Input 1 : Rook F5
+    Output 1: F4 F6 F3 F7 F2 F8 F1 G5 E5 H5 D5 C5 B5 A5 
+    
+    
+Movement of "Horse":
+    The "Horse" can move to any spot from its position (2 step vertical + 1 step horizontal) OR (2 step horizontal + 1 step vertical)
+    Input 1 : Horse E3 
+    Output 1: G4 G2 C4 C2 F5 D5 F1 D1
+    
+    
+Movement of "Pawn":
+    The Pawn generally moves one cell in forward direction (towards opponent side). But it could also move one cell Diagonally if and 
+    only if there is an opponent piece to capture. 
+    Input 1 : Pawn E4 (Movement without any piece to its diagonal position)
+    Output 1: F4
+    
+    Input 2 : Pawn E4 (Movement with any piece to its diagonal position)
+    Output 2: F4 F5 F3 (The opponent chess piece could be either on F5 or F3 or may be on both positions).
