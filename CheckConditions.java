@@ -1,4 +1,4 @@
-package aamir;
+package game.chess;
 
 public class CheckConditions 
 {

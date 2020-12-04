@@ -1,4 +1,4 @@
-package aamir;
+package game.chess;
 import java.util.ArrayList;
 
 public class Movements 
