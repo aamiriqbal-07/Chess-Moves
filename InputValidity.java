@@ -1,8 +1,8 @@
-package game.chess;
+package aamir;
 
-public class CheckConditions 
+public class InputValidity 
 {
-	public int checkValidity(String Position)
+	public static int checkBoundry(String Position)
 	{
 		int  flag1 = 0, flag2 = 0;
 		if(Position.charAt(0)>='A' && Position.charAt(0)<='H')  
@@ -11,7 +11,7 @@ public class CheckConditions
 			flag2 = 1;
 		return (flag1 & flag2);
 	}
-	public boolean checkBoundry(char column, char row)
+	public static boolean checkBoundry(char column, char row)
 	{
 		return (column>='A' && column<='H') && (row>='1' && row<='8');
 	}
